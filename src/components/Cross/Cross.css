@@ -1,0 +1,49 @@
+#cross {
+  width: 100px;
+  height: 100px;
+  /* Safari and Chrome */
+  -webkit-animation: spin 3s linear infinite;
+  -moz-animation: spin 3s linear infinite;
+  animation: spin 3s linear infinite;
+}
+
+#cross:before,
+#cross:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: #d00;
+}
+
+#cross:before {
+  left: 50%;
+  width: 30%;
+  margin-left: -15%;
+  height: 100%;
+}
+
+#cross:after {
+  top: 50%;
+  height: 30%;
+  margin-top: -15%;
+  width: 100%;
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
